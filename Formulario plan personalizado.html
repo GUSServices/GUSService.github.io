@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Plan Personalizado</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .card-title {
+      font-size: 24px;
+      color: #333;
+    }
+    .form-group label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card shadow">
+          <div class="card-body">
+            <h5 class="card-title text-center">Plan Personalizado de Servicio Asesor de GTD</h5>
+            <form action="procesar_formulario.php" method="post">
+              <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="plan">Seleccione el Plan Deseado:</label>
+                <select class="form-control" id="plan" name="plan" required>
+                  <option value="">Seleccione un plan</option>
+                  <option value="basico">Plan Básico - Starter</option>
+                  <option value="estandar">Plan Estándar - Advanced</option>
+                  <option value="premium">Plan Premium - Pro</option>
+                  <option value="personalizado">Plan Personalizado</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="pregunta1">¿Cuál es su principal objetivo al utilizar GTD?</label>
+                <textarea class="form-control" id="pregunta1" name="pregunta1" rows="3" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="pregunta2">¿Cuáles son sus mayores desafíos en la implementación de GTD?</label>
+                <textarea class="form-control" id="pregunta2" name="pregunta2" rows="3" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="pregunta3">¿Cuánto tiempo puede dedicar semanalmente a mejorar su productividad con GTD?</label>
+                <select class="form-control" id="pregunta3" name="pregunta3" required>
+                  <option value="">Seleccione una opción</option>
+                  <option value="1-2 horas">1-2 horas</option>
+                  <option value="3-5 horas">3-5 horas</option>
+                  <option value="más de 5 horas">Más de 5 horas</option>
+                </select>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
