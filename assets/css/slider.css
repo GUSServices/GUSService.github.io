@@ -1,0 +1,34 @@
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.carousel .slides {
+  display: flex;
+  animation: slide-animation 5s infinite; /* Cambia la duración según tus necesidades */
+}
+
+.carousel .slide {
+  flex: 0 0 100%;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes slide-animation {
+  0% {
+    transform: translateX(0);
+  }
+  33.33% {
+    transform: translateX(-100%);
+  }
+  66.66% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
